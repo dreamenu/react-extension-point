@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "declarationDir": "./types",
     "allowSyntheticDefaultImports": true,
     "allowJs": true,
     "alwaysStrict": true,

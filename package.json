@@ -2,7 +2,7 @@
   "name": "react-extension-point",
   "version": "1.0.0",
   "main": "lib/index.js",
-  "types": "./lib/index.d.ts",
+  "types": "lib/index.d.ts",
   "repository": "https://github.com/SoerenStahlmann/react-extension-point.git",
   "author": "SoerenStahlmann <mannstahl@hotmail.de>",
   "license": "MIT",
