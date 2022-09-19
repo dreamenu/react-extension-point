@@ -1,0 +1,31 @@
+{
+  "name": "react-extension-point",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "types": "./lib/index.d.ts",
+  "repository": "https://github.com/SoerenStahlmann/react-extension-point.git",
+  "author": "SoerenStahlmann <mannstahl@hotmail.de>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "prebuild": "eslint --ext .ts,.tsx . --fix",
+    "build": "tsc",
+    "prettier-format": "prettier --config .prettierrc 'src/**/*.ts*' --write"
+  },
+  "dependencies": {
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.18",
+    "@types/react": "^18.0.20",
+    "@typescript-eslint/eslint-plugin": "^5.38.0",
+    "@typescript-eslint/parser": "^5.38.0",
+    "eslint": "^8.23.1",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.3"
+  }
+}

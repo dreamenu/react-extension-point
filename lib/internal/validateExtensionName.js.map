@@ -1,0 +1,1 @@
+{"version":3,"file":"validateExtensionName.js","sourceRoot":"","sources":["../../src/internal/validateExtensionName.js"],"names":[],"mappings":";;AAAA,mBAAe,UAAC,KAAK;IACnB,IAAI,CAAC,KAAK,IAAI,OAAO,KAAK,KAAK,QAAQ,EAAE;QACvC,MAAM,IAAI,SAAS,CACjB,mEAA2D,KAAK,iBAAM,OAAO,KAAK,MAAG,CACtF,CAAC;KACH;IACD,OAAO,KAAK,CAAC,IAAI,EAAE,CAAC;AACtB,CAAC,EAAC"}
