@@ -1,5 +1,5 @@
 {
-  "name": "react-extension-point",
+  "name": "@openpos/react-extension-point",
   "version": "1.0.0",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
