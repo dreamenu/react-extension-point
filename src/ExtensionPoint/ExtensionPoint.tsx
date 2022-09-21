@@ -23,10 +23,7 @@ const ExtensionPoint: React.FC<ExtensionPointProps> = ({
   registry,
   ...props
 }) => {
-  registry =
-    registry ||
-    React.useContext(ExtensionContext) ||
-    require('../ExtensionRegistry').default;
+  registry = registry || React.useContext(ExtensionContext);
   const Extension =
     registry && registry.getExtension && registry.getExtension(extensionName);
 
