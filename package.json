@@ -3,7 +3,7 @@
   "version": "1.0.3",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "repository": "https://github.com/SoerenStahlmann/react-extension-point.git",
+  "repository": "https://github.com/dreamenu/react-extension-point.git",
   "author": "SoerenStahlmann <mannstahl@hotmail.de>",
   "license": "MIT",
   "private": false,
