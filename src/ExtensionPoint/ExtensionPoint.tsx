@@ -8,6 +8,7 @@ interface ExtensionPointProps {
   extensionName: string;
   registry?: ExtensionRegistry;
   children?: any;
+  [key: string]: any;
 }
 
 /**
@@ -42,3 +43,6 @@ const ExtensionPoint: React.FC<ExtensionPointProps> = ({
 };
 
 export default ExtensionPoint;
+
+const t = <ExtensionPoint extensionName="Test" />;
+export { t };
