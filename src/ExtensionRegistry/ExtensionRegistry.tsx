@@ -10,15 +10,22 @@ const required = (name: string) => {
 };
 
 export const createExtensionRegistry = () => {
-  const extensions = {};
+  const extensions: any = {};
   return {
     addExtension(
       extensionName: string,
       extension: JSX.Element | any = required('extension')
     ) {
       extensionName = validateExtensionName(extensionName);
-      // @ts-ignore
-      extensions[extensionName.toLowerCase()] = extension;
+      const lowercaseExtensionName: string = extensionName.toLowerCase();
+      if (extensions[lowercaseExtensionName]) {
+        extensions[lowercaseExtensionName] = [
+          ...extensions[lowercaseExtensionName],
+          extension,
+        ];
+      } else {
+        extensions[lowercaseExtensionName] = [extension];
+      }
     },
 
     getExtension(extensionName: string) {

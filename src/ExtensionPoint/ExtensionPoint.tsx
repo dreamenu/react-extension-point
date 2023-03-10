@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { cloneElement, isValidElement, useContext } from 'react';
 import ExtensionContext from '../ExtensionProvider';
 
 import { ExtensionRegistry } from '../ExtensionRegistry/index';
@@ -24,22 +25,28 @@ const ExtensionPoint: React.FC<ExtensionPointProps> = ({
   registry,
   ...props
 }) => {
-  registry = registry || React.useContext(ExtensionContext);
-  const Extension =
+  registry = registry || useContext(ExtensionContext);
+  const extensions =
     registry && registry.getExtension && registry.getExtension(extensionName);
 
   if (typeof children === 'function') {
-    return children(Extension, props) || null;
-  } else if (typeof Extension === 'undefined') {
-    if (React.isValidElement(children)) {
-      return React.cloneElement(children, props);
+    return children(extensions, props) || null;
+  } else if (typeof extensions === 'undefined') {
+    if (isValidElement(children)) {
+      return cloneElement(children, props);
     } else {
       return children;
     }
-  } else if (!Extension) {
+  } else if (!extensions) {
     return null;
   }
-  return <Extension {...props} />;
+  return (
+    <>
+      {extensions.map((Extension: any, index: number) => (
+        <Extension key={index} {...props} />
+      ))}
+    </>
+  );
 };
 
 export default ExtensionPoint;
